@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="vNextChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to vNextChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UE-Zs-hlr">
+                                <rect key="frame" x="20" y="78" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-GH-uf4">
+                                <rect key="frame" x="20" y="143.5" width="374" height="34"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8I-4w-Eo4">
+                                <rect key="frame" x="20" y="231.5" width="374" height="34"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-yD-PyG">
+                                <rect key="frame" x="256" y="300" width="138" height="36"/>
+                                <color key="backgroundColor" red="0.31280708309999999" green="0.52587759489999997" blue="0.96082872149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="1Gx-RR-4he"/>
+                                    <constraint firstAttribute="height" constant="36" id="mMs-01-7Rl"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hbz-YW-XpR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-Pb-o0b">
+                                <rect key="frame" x="20" y="300" width="138" height="36"/>
+                                <color key="backgroundColor" red="0.31280708309999999" green="0.52587759489999997" blue="0.96082872149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="mj7-4O-gnn"/>
+                                    <constraint firstAttribute="height" constant="36" id="s8V-HN-hHW"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3In-lS-Op2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esi-CI-HeX">
+                                <rect key="frame" x="20" y="187.5" width="374" height="34"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Frd-yD-PyG" firstAttribute="top" secondItem="X8I-4w-Eo4" secondAttribute="bottom" constant="34.5" id="1qp-dA-dkr"/>
+                            <constraint firstItem="6UE-Zs-hlr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5m1-kh-xDS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KJb-GH-uf4" secondAttribute="trailing" constant="20" id="7HK-zC-sjj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X8I-4w-Eo4" secondAttribute="trailing" constant="20" id="9N0-j6-umE"/>
+                            <constraint firstItem="X8I-4w-Eo4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ai4-GD-YPD"/>
+                            <constraint firstItem="hAE-Pb-o0b" firstAttribute="top" secondItem="X8I-4w-Eo4" secondAttribute="bottom" constant="34.5" id="Byj-Av-Y4i"/>
+                            <constraint firstItem="6UE-Zs-hlr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="Q0N-yz-szu"/>
+                            <constraint firstItem="hAE-Pb-o0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QE9-Mn-PkR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="esi-CI-HeX" secondAttribute="trailing" constant="20" id="RP3-aO-pMa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6UE-Zs-hlr" secondAttribute="trailing" constant="20" id="VmV-0c-Dpb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Frd-yD-PyG" secondAttribute="trailing" constant="20" id="aGU-1d-P7k"/>
+                            <constraint firstItem="esi-CI-HeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b5C-cg-XCC"/>
+                            <constraint firstItem="KJb-GH-uf4" firstAttribute="top" secondItem="6UE-Zs-hlr" secondAttribute="bottom" constant="39" id="iGI-2y-JOu"/>
+                            <constraint firstItem="esi-CI-HeX" firstAttribute="top" secondItem="KJb-GH-uf4" secondAttribute="bottom" constant="10" id="iVh-sb-Pk0"/>
+                            <constraint firstItem="KJb-GH-uf4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k0u-2E-7hs"/>
+                            <constraint firstItem="X8I-4w-Eo4" firstAttribute="top" secondItem="esi-CI-HeX" secondAttribute="bottom" constant="10" id="m6S-zZ-IPh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1NH-BJ-Xh6" appends="YES" id="7uK-tG-YHL"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="KJb-GH-uf4" id="aII-tV-d6Z"/>
+                        <outlet property="passwordTextField" destination="esi-CI-HeX" id="xC4-gk-x0b"/>
+                        <outlet property="repeatPasswordTextField" destination="X8I-4w-Eo4" id="X8J-Pz-Bo6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1NH-BJ-Xh6">
+                    <connections>
+                        <action selector="backgroundTap:" destination="BYZ-38-t0r" id="iAL-a0-hc7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
